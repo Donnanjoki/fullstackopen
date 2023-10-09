@@ -241,44 +241,22 @@ example: add another item to a list or show or hide a UI feature.
 
 >. While to define a default value for <textarea> you put it between the opening and closing tags of the <textarea> element
 
+### The <button> Element
+
+>. The button element has 3 type attributes; that is submit, reset or button.
+        1]] Submit button: this is the default value, which sends the form's data to the web page defined by the action attribute of the <form> element
+        2]] a click on the reset button resets all the form widget to their default value immediately. From a UX pov its bad practice to use this button so avoid it
+        3]] The button attribute does nothing, but its handy for building custom buttons - you can defines their chosen functionality with Javascript
 
 
+     ### Sending form data to your web server ###
 
+>. The <form> element defines where and how to send the data thanks to the action and method attributes. 
+>. We provide a name attribute for each form control, the names are important for both the client- and server-side as they tell the browser which name to give each piece of data, and on the
+server side, they let the server handle each piece of data by name.
 
-
-
-
-
-        
-
->. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+>. In the form.html example, we have 3 piece of data names; "user_name", "user_email", and "user_message".
+This data will be sent to the URL "/my-handling-form-page" using the HTTP post method.
 
 
 
