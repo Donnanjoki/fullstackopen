@@ -1,5 +1,9 @@
 Notes:
 
+## cd to the file name example part1
+
+## npm run dev - to run the application
+
 Tool used Vite:
 
 > . App.jsx defines a react component with the name App.
@@ -68,3 +72,14 @@ Note a component can be used multiple times in react.
 # Note - do not render objects - in react - the individual things rendered in braces must be primitive values such as numbers or strings.
 
 # React also allows arrays to be rendered if the array contains values that are eligible for rendering such as numbers or strings
+
+# Component State, Event Handlers
+
+---
+
+> . In Javascript defining functions within functions is a commonly-used technique.
+
+> . Making repeated calls to the render method is not the recommended way to re-render components.
+
+Stateful Component
+##################
