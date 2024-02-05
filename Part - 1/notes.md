@@ -83,3 +83,38 @@ Note a component can be used multiple times in react.
 
 Stateful Component
 ##################
+
+> . An event handler is a function.
+
+# Passing state to child components
+
+> . It's recommended to write React components that are small and reusable across the application and even across projects
+
+# One best practice in React is to lift the state up in the component hierarchy. The documentation says:
+
+# Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor.
+
+Main principles of how an application works
+
+1. When an application starts the code in App is executed
+2. This code uses a useState hook to create the application state - setting the initial value of the variable counter.
+
+3. The component contains the Display component - which displats the counter's value, 0 and three button components.
+4. The buttons are all event handlers, which are used to change the state of the counter.
+
+5. When one button is clicked, the event handler is executed
+6. The event handler changes the state of the App component with the setCounter function. Calling a function that changes the state causes the component to re-render.
+
+7. So, if a user clicks the plus button, the button's event handler changes the value of counter to 1, and the App component is re-rendered. This causes its sub-components Display and Button to also be re-rendered. Display receives the new value of the counter, 1, as props.
+8. The button components receives event handlers which can be used to change the state of the counter
+
+> . Do not ever try to guess what your code does. It is just better to use console.log and see with your own eyes what it does.
+
+# A more complex state, debugging React apps
+
+> . Note its forbidden in React to mutate state directly, since it can lead to unexpected side effects.
+> Hence changing state has always been done by setting the state to a new object.
+
+> . If properties from the previous state objects have not been changed, they simply need to be copied, which is done by copying those properties into a new object and setting that as the new state.
+
+> . Even if mutating state appears to work in some cases, it can lead to problems that are very hard to debug.
