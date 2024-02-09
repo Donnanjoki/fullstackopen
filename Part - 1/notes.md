@@ -118,3 +118,46 @@ Main principles of how an application works
 > . If properties from the previous state objects have not been changed, they simply need to be copied, which is done by copying those properties into a new object and setting that as the new state.
 
 > . Even if mutating state appears to work in some cases, it can lead to problems that are very hard to debug.
+
+# OLD REACT
+
+> . Before the addition of hooks, there was no way to add state to functional components - is components required state they had to be defined as class components using javascript class syntax.
+
+> . Even though functional components are the future of REACT, its still important to learn the class syntax.
+
+## Debugging REACT APPLICATIONS
+
+> . A large part of a typical developer's time is spent on debugging and reading existing code.
+> . Hence trying to figure out how something works, and why something is broken.
+
+> . If and when your code fails to compile and your browser lights up with errors - dont write any more code but rather find and fix the problem immediately.
+
+> . old-school, print-based debugging is always a good idea -
+
+# If the component is not working as intended then start printing its variables out to the console. In order for this to be effective, we must transform our function into the less compact form and receive the entire props object without destructuring it immediately.
+
+# When using console.log also separate the things you want to log to the console with a comma rather than combining them with a plus operator (JAVA-like fashion).
+
+# In this way the separated items will all be available in the browser console for further inspection.
+
+# Another way to debug is using the command "debugger" anywhere in the code. The execution will pause once it arrives at a point where the debugger command gets executed:
+
+# By going to the Console tab, it is easy to inspect the current state of variables: Once the cause of the bug is discovered you can remove the debugger command and refresh the page.
+
+# You can also access the debugger without the debugger command by adding breakpoints in the sources tab. Inspecting the values of the component's variables can be done in the Scope-section:
+
+# Developer tools tab can be used to inspect the different React elements in the application, along with their state and props:
+
+## Event Handling Revisited
+
+Note Event handlers always have to be a function or a reference to a function.
+We must never mutate state directly in React.
+
+## A function that returns a function
+
+> . Another way to define an event handler is to use a function that returns a function.
+
+# Do not define components within components
+
+> . Never define components inside other components - as this provides no benefits and leads to many unpleasant problems.
+> . Another issues is that REACT treats a component defined inside it as a new component in every render - hence making it impossible for REACT to optimize the component.
